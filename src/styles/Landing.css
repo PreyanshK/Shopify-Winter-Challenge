@@ -1,0 +1,37 @@
+.homeContainer {
+  position: relative;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* fixed = parallax effect*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeText {
+  width: 1000px;
+  color: #3d1f04;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* background-color: lightcyan; */
+}
+
+.headingOne {
+  margin: 0;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.headingTwo {
+  margin: 0;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+  color: #8bc34a;
+}

@@ -1,0 +1,18 @@
+.imageGalleryContainer {
+  padding: 40px;
+  margin: auto;
+}
+
+.galleryHeading {
+  font-size: 30px;
+  color: #000;
+}
+
+.imagesContainer {
+  margin: 30px auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

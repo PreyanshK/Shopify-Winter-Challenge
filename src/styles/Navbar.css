@@ -1,0 +1,24 @@
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: #8bc34a;
+  position: fixed;
+  z-index: 100;
+}
+
+.headingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.heading {
+  color: white;
+  padding: 15px;
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}

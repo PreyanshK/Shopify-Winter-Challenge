@@ -1,5 +1,5 @@
 .homeContainer {
-  position: relative;
+  /* position: relative; */
   height: 30vh;
   background-size: cover;
   background-position: center;
@@ -8,6 +8,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.homeWrapper {
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* background-color: lightblue; */
+}
+
+.nasaLogo {
+  width: 250px;
+  margin: 20px;
 }
 
 .homeText {

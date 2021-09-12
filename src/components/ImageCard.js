@@ -2,20 +2,28 @@ import React from 'react';
 import { IconButton } from '@material-ui/core';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import Space from '../images/space.jpg';
 import '../styles/ImageCard.css';
 
-const ImageCard = (props) => {
+const ImageCard = ({ image }) => {
   return (
     <div className="cardContainer">
-      <img className="nasaImage" src={Space} />
-
+      {image.media_type === 'image' ? (
+        <img className="nasaImage" src={image.url} />
+      ) : (
+        <iframe
+          title="space-video"
+          src={image.url}
+          frameBorder="0"
+          gesture="media"
+          allow="encrypted-media"
+          className="nasaImage"
+        />
+      )}
       <div className="infoContainer">
-        <h1 className="title">Image Name</h1>
-        <h1 className="date">01-01-2021</h1>
-        <p className="description">This is a description about the image</p>
+        <h1 className="title">{image.title}</h1>
+        <h1 className="date">{image.date}</h1>
+        <p className="description">{image.explanation}</p>
       </div>
-
       <div className="buttonContainer">
         <IconButton target="_blank" variant="outlined">
           <FavoriteIcon />

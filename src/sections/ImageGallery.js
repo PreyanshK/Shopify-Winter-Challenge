@@ -9,7 +9,7 @@ const ImageGallery = () => {
 
   const fetchNASAImages = async () => {
     const response = await fetch(
-      `https://api.nasa.gov/planetary/apod?start_date=2021-09-02&api_key=${apiKey}`
+      `https://api.nasa.gov/planetary/apod?start_date=2021-09-01&api_key=${apiKey}`
     );
 
     const data = await response.json();
@@ -27,8 +27,6 @@ const ImageGallery = () => {
 
   return (
     <section className="imageGalleryContainer">
-      <h1 className="galleryHeading">Explore the Universe!</h1>
-
       <div className="imagesContainer">
         {photoData.map((image) => {
           return <ImageCard image={image} />;

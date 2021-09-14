@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="navContainer">
       <div className="headingWrapper">
-        <h1 className="heading">Spacestagram</h1>
+        <h1 className="heading">SPACESTAGRAM</h1>
       </div>
     </div>
   );

@@ -1,17 +1,15 @@
 .homeContainer {
-  /* position: relative; */
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 15px 0;
 }
 
-.homeWrapper {
+.titleWrapper {
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 20px 40px;
+  margin: auto;
+  padding: 0 60px;
 }
 
 .nasaLogo {
@@ -23,14 +21,13 @@
   color: #3d1f04;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .headingOne {
   margin: 0;
   padding: 10px;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -40,5 +37,49 @@
   font-size: 25px;
   font-weight: 500;
   text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .homeText {
+    justify-content: center;
+  }
+}
+
+.githubContainer {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryHeading {
+  font-size: 40px;
+  font-weight: 500;
   color: #8bc34a;
+}
+
+.gallerySubHeading {
+  color: #a4a4a4;
+  font-weight: 300;
+  font-size: 22px;
+  margin: 0 40px;
+}
+
+.discoverButton {
+  padding: 15px 50px;
+  margin: 30px 20px 20px 20px;
+  border-radius: 2em;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #009688;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.discoverButton:hover {
+  background-color: #38ada9;
 }

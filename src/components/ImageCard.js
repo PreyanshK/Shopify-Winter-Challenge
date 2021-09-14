@@ -6,10 +6,13 @@ import ShareIcon from '@material-ui/icons/Share';
 import '../styles/ImageCard.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Snackbar from '@material-ui/core/Snackbar';
-import CloseIcon from '@material-ui/icons/Close';
+import MuiAlert from '@material-ui/lab/Alert';
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const ImageCard = ({ image }) => {
-  const [heartColour, setheartColour] = useState('');
   const [isLiked, setIsLiked] = useState(false);
   const [open, setOpen] = React.useState(false);
 
@@ -29,7 +32,7 @@ const ImageCard = ({ image }) => {
     setOpen(true);
   };
 
-  const handleClose = (event, reason) => {
+  const handleClose = (reason) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -51,6 +54,7 @@ const ImageCard = ({ image }) => {
           className="nasaImage"
         />
       )}
+
       <div className="infoContainer">
         <h1 className="title">{image.title}</h1>
         <h1 className="date">{image.date}</h1>
@@ -77,28 +81,11 @@ const ImageCard = ({ image }) => {
           </IconButton>
         </CopyToClipboard>
 
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
-          }}
-          open={open}
-          autoHideDuration={5000}
-          onClose={handleClose}
-          message="Copied URL to Clipboard"
-          action={
-            <React.Fragment>
-              <IconButton
-                size="small"
-                aria-label="close"
-                color="inherit"
-                onClick={handleClose}
-              >
-                <CloseIcon fontSize="small" />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
+        <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="success">
+            Copied URL to Clipboard!
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );

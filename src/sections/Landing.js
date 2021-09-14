@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Landing.css';
 import NASA from '../images/NASA_logo.png';
 
-const Landing = (props) => {
+const Landing = () => {
   return (
     <section className="homeContainer" id="home">
       <div className="homeWrapper">

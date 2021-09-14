@@ -1,11 +1,13 @@
 .imageGalleryContainer {
-  padding: 40px;
+  padding: 0px 40px;
   margin: auto;
 }
 
 .galleryHeading {
-  font-size: 30px;
-  color: #000;
+  font-size: 40px;
+  font-weight: 500;
+  color: #ffb74d;
+  margin-bottom: 60px;
 }
 
 .imagesContainer {

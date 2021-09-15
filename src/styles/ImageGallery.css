@@ -1,3 +1,9 @@
+.loadingIndicator {
+  width: 200px;
+  margin: 50px auto;
+  color: #8bc34a;
+}
+
 .imageGalleryContainer {
   padding: 20px 40px;
   margin: 20px auto 0;

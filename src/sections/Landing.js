@@ -82,7 +82,7 @@ const Landing = () => {
         <input
           className="dateInputBox"
           type="text"
-          placeholder={'Enter a Start Date: YYYY-MM-DD'}
+          placeholder={'Enter a start date: YYYY-MM-DD'}
           onChange={(e) => setTempDate(e.target.value)}
         />
         <button

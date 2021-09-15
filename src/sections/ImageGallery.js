@@ -4,12 +4,12 @@ import '../styles/ImageGallery.css';
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
-const ImageGallery = () => {
+const ImageGallery = ({ startDate }) => {
   const [photoData, setPhotoData] = useState(null);
 
   const fetchNASAImages = async () => {
     const response = await fetch(
-      `https://api.nasa.gov/planetary/apod?start_date=2021-09-01&api_key=${apiKey}`
+      `https://api.nasa.gov/planetary/apod?start_date=${startDate}&api_key=${apiKey}`
     );
 
     const data = await response.json();
@@ -20,9 +20,9 @@ const ImageGallery = () => {
 
   useEffect(() => {
     fetchNASAImages();
-  }, []);
+  }, [startDate]);
 
-  //incase the API doesn't return any response display an error
+  //incase the API doesn't return any response
   if (!photoData) return <div />;
 
   return (
